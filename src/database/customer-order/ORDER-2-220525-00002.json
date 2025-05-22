@@ -1,0 +1,18 @@
+{
+  "id_customer": 2,
+  "name": "Jane Smith",
+  "email": "jane.smith@example.com",
+  "address": "Test Address",
+  "payment_type": "Transfer",
+  "items": [
+    {
+      "id_product": 2,
+      "name": "Product b",
+      "price": 5000,
+      "qty": 2
+    }
+  ],
+  "no_order": "ORDER-2-220525-00002",
+  "total": 10000,
+  "status": "Order Diterima:"
+}

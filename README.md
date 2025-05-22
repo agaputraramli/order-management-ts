@@ -1,21 +1,25 @@
 # order-management-ts
+
 API backend untuk mengelola order pembelian menggunakan Express dan TypeScript.
-Fitur
-Endpoint POST /api/orders untuk membuat order.
 
-Delay pemrosesan 3 detik secara asynchronous.
+---
 
-Generate nomor order unik: ORDER-{ID_CUSTOMER}-{TGLBULANTAHUN}-{RUNNING_NUMBER}.
+## Fitur
 
-Simpan data order ke file .json dalam folder /database/customer-order/.
+- Endpoint **POST /api/orders** untuk membuat order.
+- Delay pemrosesan 3 detik secara asynchronous (non-blocking).
+- Generate nomor order unik dengan format:  
+  `ORDER-{ID_CUSTOMER}-{TGLBULANTAHUN}-{RUNNING_NUMBER}`.
+- Simpan data order ke file `.json` dalam folder `/database/customer-order/`.
+- Retry penyimpanan file hingga maksimal 3 kali jika gagal.
+- Cegah order bersamaan dari customer yang sama (concurrency lock).
+- Data customer diambil dari file `mock/customers.json`.
 
-Retry penyimpanan file hingga 3x jika gagal.
+---
 
-Cegah order bersamaan dari customer yang sama (concurrency lock).
+## Contoh Request
 
-Data customer diambil dari file mock/customers.json
-
-Contoh request:
+```json
 {
   "name": "Jhon Doe",
   "address": "Test Address",

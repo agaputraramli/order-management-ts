@@ -14,7 +14,10 @@ API backend untuk mengelola order pembelian menggunakan Express dan TypeScript.
 - Retry penyimpanan file hingga maksimal 3 kali jika gagal.
 - Cegah order bersamaan dari customer yang sama (concurrency lock).
 - Data customer diambil dari file `mock/customers.json`.
-
+-  Worker background (cron job) setiap 10 detik untuk:
+  - Membaca semua file order.
+  - Mengupdate status menjadi `Dikirim ke customer`.
+  - Memindahkan ke folder `/database/delivered-order/`.
 ---
 
 ## Contoh Request

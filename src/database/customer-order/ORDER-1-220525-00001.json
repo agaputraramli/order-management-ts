@@ -1,0 +1,18 @@
+{
+  "id_customer": 1,
+  "name": "Jhon Doe",
+  "email": "jhon.doe@gmail.com",
+  "address": "Test Address",
+  "payment_type": "Transfer",
+  "items": [
+    {
+      "id_product": 3,
+      "name": "Product c",
+      "price": 6000,
+      "qty": 2
+    }
+  ],
+  "no_order": "ORDER-1-220525-00001",
+  "total": 12000,
+  "status": "Dikirim ke customer"
+}

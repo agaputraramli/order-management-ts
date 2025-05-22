@@ -20,7 +20,21 @@ API backend untuk mengelola order pembelian menggunakan Express dan TypeScript.
   -  Memindahkan ke folder `/database/delivered-order/` 
 ---
 
-## Contoh Request
+Cara Menjalankan Aplikasi
+1. Clone repository ini
+bash
+Copy
+Edit
+git clone https://github.com/agaputraramli/order-management-ts.git
+- cd order-management-ts
+2. Install dependencies
+- npm install
+3. Jalankan server development
+- npm run dev
+4. Hit API menggunakan postman dengan endpoint
+- http://localhost:3000/api/orders
+
+- ## Contoh Request
 
 ```json
 {
@@ -31,3 +45,4 @@ API backend untuk mengelola order pembelian menggunakan Express dan TypeScript.
     { "id_product": 1, "name": "Product a", "price": 5000, "qty": 2 }
   ]
 }
+```
